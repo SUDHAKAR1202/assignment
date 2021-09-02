@@ -1,0 +1,88 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <form>
+        <label for="fname">Full Name</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter your first name"><br><br>
+
+        <label for="spin">Secret Pin</label>
+        <input type="text" id="spin" name="spin" placeholder="Enter your secret pin">
+
+        <p>Gender
+            <input type="radio" id="male" name="male" value="Male" onclick="checkMale()">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="female" value="Female" onclick="checkFemale()">
+            <label for="female">Female</label>
+        </p>
+
+        <p>I am expert in
+            <input type="checkbox" id="expert" name="expert" value="HTML">
+            <label for="expert">HTML</label>
+
+            <input type="checkbox" id="expert" name="expert" value="CSS">
+            <label for="expert">CSS</label>
+        </p>
+
+        <p>My field of study is
+            <select name="branch" id="branches" placeholder="Select your branch using drop down">
+                <option value="CSE">CSE</option>
+                <option value="Mech">Mech</option>
+                <option value="ECE">ECE</option>
+            </select>
+        </p>
+
+        <p>Tell more about yourself
+            <textarea rows="4" cols="50">
+     This is text area .Enter your description
+  </textarea>
+        </p>
+
+        <input type="submit" value="Submit Form" onclick="clickevent()">
+
+    </form>
+    </head>
+    <script>
+
+        function clickevent() {
+            var x = document.getElementById("fname").value;
+            window.alert(x);
+
+            if (document.getElementById("fname").value == "") {
+                window.alert("Full Name is missing");
+            }
+
+
+        }
+
+        function checkMale() {
+            if (document.getElementById("male").checked = "true") {
+                alert("Male");
+            }
+
+
+
+            else (document.getElementById("male").checked = "false")
+
+        }
+
+
+
+        function checkFemale() {
+            if (document.getElementById("female").checked = "true") {
+                alert("Female");
+            }
+            else (document.getElementById("female").checked = "false")
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
